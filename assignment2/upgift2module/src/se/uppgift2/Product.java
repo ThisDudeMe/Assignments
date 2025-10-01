@@ -1,25 +1,28 @@
-package se.javabackend;
-
-import jdk.jfr.Category;
+package se.uppgift2;
 
 public abstract class Product {
 
+    private int articleNumber;
     private String title;
     private double price;
-    private int articleNumber;
     private String description;
-    private int stock;
 
 
-    public Product(String title, double price, int articleNumber, String description, int stock) {
+    public Product(String title, double price, int articleNumber, String description) {
 
         this.title = title;
         this.price = price;
         this.articleNumber = articleNumber;
         this.description = description;
-        this.stock = stock;
 
     }
+
+    @Override
+    public String toString() {
+        return String.format("Category: %s | Article #%d | Title: %s | Price: %.2f kr | Description: %s",
+                category(), articleNumber, title, price, description);
+    }
+
 
     public abstract String category();
 
@@ -55,9 +58,6 @@ public abstract class Product {
         this.description = description;
 
     }
-    public void setStock(int stock) {
-        this.stock = stock;
-    }
 
     public String getTitle() {
 
@@ -80,8 +80,6 @@ public abstract class Product {
         return description;
     }
 
-    public int getStock() {
-        return stock;
-    }
+
 
 }

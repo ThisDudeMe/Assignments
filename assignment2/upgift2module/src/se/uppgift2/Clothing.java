@@ -1,4 +1,4 @@
-package se.javabackend;
+package se.uppgift2;
 
 public class Clothing extends Product{
 
