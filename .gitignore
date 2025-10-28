@@ -1,46 +1,38 @@
-# OS-specific
-.DS_Store
-Thumbs.db
-
-# Logs and temp files
-logs/
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-*.tmp
-*.temp
-*.swp
-*.swo
-
-# IDEs and editors
-.idea/
-*.iml
-.vscode/
-.classpath
-.project
-.settings/
-
-# Java/Build tools
 target/
-build/
-out/
-.gradle/
-hs_err_pid*
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### IntelliJ IDEA ###
+.idea/modules.xml
+.idea/jarRepositories.xml
+.idea/compiler.xml
+.idea/libraries/
+*.iws
+*.iml
+*.ipr
+
+### Eclipse ###
+.apt_generated
+.classpath
 .factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
 
-# Node/React
-node_modules/
-dist/
-coverage/
-.cache/
-.parcel-cache/
-.eslintcache
-.turbo/
-**/node_modules/.vite/
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
 
-# Environment files
-.env
-.env.local
-.env.*.local
+### VS Code ###
+.vscode/
+
+### Mac OS ###
+.DS_Store
