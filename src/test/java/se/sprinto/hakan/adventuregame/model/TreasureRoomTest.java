@@ -15,11 +15,15 @@ public class TreasureRoomTest {
         fakeUI.setInput("ja");
 
         Player player = new Player("Test Player", 100, 0, 10);
+        player.setFoundKey(true);
+        
         TreasureRoom treasureRoom = new TreasureRoom();
         treasureRoom.enterRoom(player, fakeUI);
 
         assertTrue(player.hasOpenedChest(), "Player should have opened chest");
     }
+    
+    
 
     @Test
     public void TestChestDoesNotOpenWhenPlayerDoesNotHaveKey(){
@@ -34,5 +38,7 @@ public class TreasureRoomTest {
 
         assertFalse(player.hasOpenedChest(), "Player should not have opened chest");
     }
+    
+    
 
 }
