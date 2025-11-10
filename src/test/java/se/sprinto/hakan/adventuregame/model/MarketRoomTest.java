@@ -15,7 +15,7 @@ public class MarketRoomTest {
     
     @BeforeEach
     public void setUp() {
-        player = new Player("Test Player", 100, 100, 10);
+        player = new Player.Builder().name("Test Player").health(100).score(0).strength(10).build();
         room = new MarketRoom();
         fakeUI = new FakeUI();
     }

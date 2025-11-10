@@ -14,7 +14,7 @@ public class WizardTowerRoomTest {
     
     @BeforeEach
     public void setUp() {
-        player = new Player("Test Player", 50, 0, 10);
+        player = new Player.Builder().name("Test Player").health(100).score(0).strength(10).build();
         room = new WizardTowerRoom();
         fakeUI = new FakeUI();
     }

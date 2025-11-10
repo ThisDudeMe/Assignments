@@ -13,7 +13,7 @@ public class DungeonRoomTest {
         FakeUI fakeUI = new FakeUI();
         fakeUI.setInput("a");
 
-        Player player = new Player("Test player", 100, 0, 10);
+        Player player = new Player.Builder().name("Test Player").health(100).score(0).strength(10).build();
 
         DungeonRoom dungeonRoom = new DungeonRoom();
         dungeonRoom.enterRoom(player, fakeUI);

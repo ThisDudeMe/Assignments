@@ -7,7 +7,7 @@ public class PlayerTest {
 
     @Test
     public void testAttackReducesEnemyHealth() {
-        Player player = new Player("Test Player", 100, 0, 10);
+        Player player = new Player.Builder().name("Test Player").health(100).score(0).strength(10).build();
 
         Enemy enemy = new Enemy("Test Enemy", 20, 0, 5);
 

@@ -19,17 +19,20 @@ public class Main {
         ui.showMessage("Version " + appInfo.getVersion() + " av " + appInfo.getAuthor());
         
         String name = ui.getInput("Ange ditt namn:");
-        Player player = new Player(name, 100, 0, 10);
 
+        Player player = new Player.Builder().name(name).health(100).score(0).strength(10).build();
         new StartRoom().enterRoom(player, ui);
 
         StatisticsDao dao = new FileStatisticsDao();
         dao.save(new Statistics(player.getName(), player.getScore()));
 
-        StatisticsService service = new StatisticsService(dao);
-        ui.showMessage("\n--- Topplista ---");
-        for (Statistics s : service.getSortedStatistics()) {
-            ui.showMessage(s.getPlayerName() + " - " + s.getScore() + " poäng");
+        StatisticsService statisticsService = new StatisticsService(dao);
+
+        ui.showMessage("\n --- Topplista ---");
+
+        for (Statistics s : statisticsService.getSortedStatistics()) {
+            ui.showMessage(s.getPlayerName() + " - " + s.getScore() + "poäng");
+
         }
     }
 }

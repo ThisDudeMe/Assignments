@@ -12,7 +12,7 @@ public class ForestRoomTest {
         FakeUI fakeUI = new FakeUI();
         fakeUI.setInput("ja");
 
-        Player player = new Player("Test Player", 100, 0, 10);
+        Player player = new Player.Builder().name("Test Player").health(100).score(0).strength(10).build();
         ForestRoom forestRoom = new ForestRoom();
         forestRoom.enterRoom(player, fakeUI);
 
