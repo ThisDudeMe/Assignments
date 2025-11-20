@@ -12,7 +12,7 @@ public class Main {
     public static void main(String[] args) {
 
     // RÄTT connection string - ska börja med mongodb+srv://
-    String url = "mongodb+srv://<username>:<password>@<cluster>.mongodb.net/?retryWrites=true&w=majority";
+    String url = "mongodb+srv://admin:admin@uppgiftdatabas.xextgh3.mongodb.net/?appName=uppgiftdatabas";
     
     // Ersätt <username>, <password> och <cluster> med dina uppgifter
     // Exempel: mongodb+srv://myuser:mypassword@cluster0.abc123.mongodb.net/?retryWrites=true&w=majority
